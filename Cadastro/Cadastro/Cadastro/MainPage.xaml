@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cadastro.MainPage"
+             Title="Cadastro">
+
+    <ScrollView>
+        <StackLayout Margin="10" Spacing="10">
+            <Entry x:Name="txtNome"
+                   Placeholder="Nome"                    
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Start"
+                   MaxLength="100"/>
+            <Entry x:Name="txtCPF"
+                   Placeholder="CPF"                    
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Start"
+                   Keyboard="Numeric"
+                   MaxLength="11"/>
+            <DatePicker x:Name="dtNascimento"
+                        Format="dd/MM/yyyy"
+                        VerticalOptions="Start"
+                        HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtEmail"
+                   Placeholder="Email"                    
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Start"
+                   Keyboard="Email"
+                   MaxLength="160"/>
+            <Entry x:Name="txtSenha"
+                   Placeholder="Senha"                    
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Start"
+                   Keyboard="Default"
+                   IsPassword="True"
+                   MaxLength="8"/>
+            <Entry x:Name="txtConfirmaSenha"
+                   Placeholder="Confirmação de senhja"                    
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Start"
+                   Keyboard="Default"
+                   IsPassword="True"
+                   MaxLength="8"/>
+            <Button x:Name="btnLimpar"
+                    Text="Limpar"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand" 
+                    Clicked="BtnLimpar_Clicked">
+            </Button>
+            <Button x:Name="btnCadastrar"
+                    Text="Cadastrar"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End" 
+                    Clicked="BtnCadastrar_Clicked"
+                    Style="{StaticResource actionButtonStyle}">
+            </Button>
+            <Button x:Name="btnLista"
+                    Text="Lista"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End" 
+                    Clicked="BtnLista_Clicked"
+                    Style="{StaticResource actionButtonStyle}">
+            </Button>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
